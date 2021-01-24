@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Application\login\Command\LoginCommand;
 use App\Application\login\LoginHandler;
 
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,7 +24,6 @@ Route::post('/login', function (Request $request) {
     );
 });
 
+require __DIR__ . '/Api/User/UserRoutes.php';
+
 // group user
-Route::middleware('auth:api')->group(function () {
-    Route::post('/user/create', [EmailController::class, 'templateAndData'])->name('email.template');
-});

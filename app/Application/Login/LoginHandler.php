@@ -19,7 +19,7 @@ class LoginHandler {
 
 
         $validator = Validator::make(['email' => $command->getEmail(), 'password'=> $command->getPassword()], [
-            'email' => 'required|email:rfc,dns',
+            'email' => 'required',
             'password' => 'required'
         ]);
 

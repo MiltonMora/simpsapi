@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5afced4c-6168-4e11-bf57-04ca54e729a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Application/Characters/CharacterHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Application/Characters/Command/CharacterCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_26_181256_create_table_characters.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/Api/Characters/CharactersRoutes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Application/User/UserHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/User/UserHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +173,8 @@
       <workItem from="1611507042765" duration="1572000" />
       <workItem from="1611509247014" duration="1682000" />
       <workItem from="1611511392637" duration="1416000" />
-      <workItem from="1611596746505" duration="3292000" />
+      <workItem from="1611596746505" duration="3866000" />
+      <workItem from="1611684297735" duration="4693000" />
     </task>
     <servers />
   </component>
@@ -178,22 +182,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1611512467521">
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1611687263104">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1611512467521" />
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1611687263104" />
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611504337316">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1611504337316" />
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611597388080">
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611687980270">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1611597388080" />
-    <state x="517" y="292" key="NewPhpFileDialog" timestamp="1611510923658">
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1611687980270" />
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1611688248929">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1611510923658" />
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1611688248929" />
+    <state x="517" y="292" key="NewPhpFileDialog" timestamp="1611686328447">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1611686328447" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1611597835904">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

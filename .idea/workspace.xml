@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5afced4c-6168-4e11-bf57-04ca54e729a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Application/Characters/CharacterHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Application/Characters/Command/CharacterCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_26_181256_create_table_characters.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/Api/Characters/CharactersRoutes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +169,7 @@
       <workItem from="1611509247014" duration="1682000" />
       <workItem from="1611511392637" duration="1416000" />
       <workItem from="1611596746505" duration="3866000" />
-      <workItem from="1611684297735" duration="4693000" />
+      <workItem from="1611684297735" duration="5349000" />
     </task>
     <servers />
   </component>

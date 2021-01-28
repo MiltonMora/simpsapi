@@ -8,7 +8,7 @@ class CharacterCommand {
 
     private $name;
     private $image;
-    private $age;
+    private $birth;
     private $occupation;
     private $status;
     private $type;
@@ -17,7 +17,7 @@ class CharacterCommand {
     public function __construct(
         $name,
         $image,
-        $age,
+        $birth,
         $occupation,
         $status,
         $type,
@@ -26,7 +26,7 @@ class CharacterCommand {
     {
         $this->name = $name;
         $this->image = $image;
-        $this->age = $age;
+        $this->birth = $birth;
         $this->occupation = $occupation;
         $this->status = $status;
         $this->type = $type;
@@ -52,9 +52,9 @@ class CharacterCommand {
     /**
      * @return mixed
      */
-    public function getAge()
+    public function getBirth()
     {
-        return $this->age;
+        return $this->birth;
     }
 
     /**

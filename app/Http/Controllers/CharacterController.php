@@ -10,11 +10,14 @@ class CharacterController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
-        //
+        return response()->json([
+            "data" => Character::all(),
+            'status' => 200
+        ]);
     }
 
     /**
@@ -25,7 +28,7 @@ class CharacterController extends Controller
     public function create(
         $name,
         $image,
-        $age,
+        $birth,
         $occupation,
         $status,
         $type,
@@ -35,7 +38,7 @@ class CharacterController extends Controller
             $character = new Character();
             $character->name = ucwords($name);
             $character->image = $image;
-            $character->age = $age;
+            $character->birth = $birth;
             $character->occupation = $occupation;
             $character->status = $status;
             $character->type = $type;

@@ -4,6 +4,7 @@ namespace App\Application\Characters;
 
 use App\Application\Characters\Command\CharacterCommand;
 use App\Http\Controllers\CharacterController;
+use Illuminate\Support\Facades\Validator;
 
 class CharacterHandler {
 
@@ -15,10 +16,33 @@ class CharacterHandler {
     }
 
     public function handle(CharacterCommand $command){
+
+        $validator = Validator::make(['name' => $command->getName(), 'image' => $command->getImage()], [
+            'name' => 'required',
+            'image' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return response()->json([
+                'data' => $validator->errors(),
+                'status' => 404
+            ]);
+        }
+
+        try {
+            $img = file_get_contents($command->getImage());
+            $image = base64_encode($img);
+        }
+        catch (\Exception $e) {
+            return response()->json([
+                'data' => $e,
+                'status' => 404
+            ]);
+        }
+
         return $this->characterController->create(
             $command->getName(),
-            $command->getImage(),
-            $command->getAge(),
+            $image,
+            $command->getBirth(),
             $command->getOccupation(),
             $command->getStatus(),
             $command->getType(),

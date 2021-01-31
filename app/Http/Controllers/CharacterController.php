@@ -73,11 +73,22 @@ class CharacterController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show($id)
     {
-        //
+        try {
+            return response()->json([
+                'data' => Character::find($id),
+                'status' => 200
+            ]);
+        }
+        catch (\Exception $e) {
+            return response()->json([
+                'data' => $e,
+                'status' => 400
+            ]);
+        }
     }
 
     /**

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5afced4c-6168-4e11-bf57-04ca54e729a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Application/Characters/Command/GetCharactersByIdCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Application/Characters/GetCharactersByIdHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Application/Characters/EditCharactersHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Characters/CharacterHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/CharacterHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Characters/Command/CharacterCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/Command/CharacterCommand.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/Api/Characters/CharactersRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Api/Characters/CharactersRoutes.php" afterDir="false" />
     </list>
@@ -174,7 +175,8 @@
       <workItem from="1611596746505" duration="3866000" />
       <workItem from="1611684297735" duration="5438000" />
       <workItem from="1611855843691" duration="4998000" />
-      <workItem from="1612110360093" duration="2739000" />
+      <workItem from="1612110360093" duration="3584000" />
+      <workItem from="1612372192885" duration="4423000" />
     </task>
     <servers />
   </component>
@@ -182,26 +184,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1612112061389">
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1612374487796">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1612112061389" />
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1612374487796" />
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611858815319">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1611858815319" />
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611860548249">
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612373138177">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1611860548249" />
+    <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1612373138176" />
     <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1611688248929">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1611688248929" />
-    <state x="420" y="183" key="NewPhpClassDialog" timestamp="1612112130904">
+    <state x="420" y="183" key="NewPhpClassDialog" timestamp="1612372970999">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="420" y="183" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1612112130904" />
+    <state x="420" y="183" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1612372970999" />
     <state x="517" y="292" key="NewPhpFileDialog" timestamp="1611686328447">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

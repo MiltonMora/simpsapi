@@ -105,13 +105,32 @@ class CharacterController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update(
+        $id,
+        $name,
+        $image,
+        $birth,
+        $occupation,
+        $status,
+        $type,
+        $origin
+    ) {
+
+        $character = Character::find($id);
+        $character->name = $name ? ucwords($name) : $character->name;
+        $character->image = $image ? $image : $character->image;
+        $character->birth = $birth ? $birth : $character->birth;
+        $character->occupation = $occupation ? $occupation : $character->occupation;
+        $character->status = $status ? $status : $character->status;
+        $character->type = $type ? $type : $character->type;
+        $character->origin = $origin ? $origin : $character->origin;
+        $character->save();
+
+        return response()->json(
+            ['data' => $character->birth, 'status' => 200]
+        );
     }
 
     /**

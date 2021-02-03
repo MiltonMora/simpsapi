@@ -34,7 +34,7 @@ class CharacterHandler {
         }
         catch (\Exception $e) {
             return response()->json([
-                'data' => $e,
+                'data' => ['error' => $e, 'message' => 'error uploading image'],
                 'status' => 404
             ]);
         }
@@ -49,12 +49,5 @@ class CharacterHandler {
             $command->getOrigin()
         );
     }
-    /*
- * convertir imagen a base 64
-Route::post('/image', function (Request $request) {
-    $fileName = $request->file('filename');
-    $img = file_get_contents($fileName->getRealPath());
-    return base64_encode($img);
-});*/
 
 }

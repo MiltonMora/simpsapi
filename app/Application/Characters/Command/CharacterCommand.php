@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\File;
 
 class CharacterCommand {
 
+    private $id;
     private $name;
     private $image;
     private $birth;
@@ -21,9 +22,11 @@ class CharacterCommand {
         $occupation,
         $status,
         $type,
-        $origin
+        $origin,
+        $id
     )
     {
+        $this->id = $id;
         $this->name = $name;
         $this->image = $image;
         $this->birth = $birth;
@@ -31,6 +34,14 @@ class CharacterCommand {
         $this->status = $status;
         $this->type = $type;
         $this->origin = $origin;
+    }
+
+    /**
+     * @return null
+     */
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**

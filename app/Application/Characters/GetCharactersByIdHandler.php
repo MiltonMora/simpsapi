@@ -11,13 +11,13 @@ class GetCharactersByIdHandler
 
     private $characterController;
 
-    public function __construct()
+    public function __construct(CharacterController $characterController)
     {
-        $this->characterController = new CharacterController();
+        $this->characterController = $characterController;
     }
 
     public function handle(GetCharactersByIdCommand $command) {
-        return $this->characterController->show($command->getId());
+        return response()->json($this->characterController->show($command->getId()));
     }
 
 }

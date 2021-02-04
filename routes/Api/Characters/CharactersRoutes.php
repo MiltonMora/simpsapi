@@ -9,9 +9,10 @@ use App\Application\Characters\GetCharactersHandler;
 use App\Application\Characters\Command\GetCharactersByIdCommand;
 use App\Application\Characters\GetCharactersByIdHandler;
 use App\Application\Characters\EditCharactersHandler;
+use App\Http\Controllers\CharacterController;
 
-Route::middleware('auth:api')->post('/character/new', function (Request $request) {
-    $handle = new CharacterHandler();
+Route::middleware(['auth:api', 'role:superadministrator|administrator'])->post('/character/new', function (Request $request) {
+    $handle = new CharacterHandler(new CharacterController);
     return $handle->handle(
         new CharacterCommand(
             $request->name,
@@ -20,27 +21,28 @@ Route::middleware('auth:api')->post('/character/new', function (Request $request
             $request->occupation,
             $request->status,
             $request->type,
-            $request->origin
+            $request->origin,
+            ''
         )
     );
 });
 
 Route::middleware('auth:api')->get('/characters', function (Request $request) {
-    $handle = new GetCharactersHandler();
+    $handle = new GetCharactersHandler(new CharacterController);
     return $handle->handle(
         new GetCharactersCommand()
     );
 });
 
 Route::middleware('auth:api')->get('/characters/{id}', function (Request $request, $id) {
-    $handle = new GetCharactersByIdHandler();
+    $handle = new GetCharactersByIdHandler(new CharacterController);
     return $handle->handle(
         new GetCharactersByIdCommand($id)
     );
 });
 
-Route::middleware('auth:api')->put('/character/edit', function (Request $request) {
-    $handle = new EditCharactersHandler();
+Route::middleware(['auth:api', 'role:superadministrator|administrator'])->put('/character/edit', function (Request $request) {
+    $handle = new EditCharactersHandler(new CharacterController);
 
     return $handle->handle(
         new CharacterCommand(

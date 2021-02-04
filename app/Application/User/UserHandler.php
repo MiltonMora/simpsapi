@@ -10,9 +10,9 @@ class UserHandler {
 
     private $UserController;
 
-    public function __construct()
+    public function __construct(UserController $UserController)
     {
-        $this->UserController = new UserController();
+        $this->UserController = $UserController;
     }
 
     public function handle (UserCommand $command) {
@@ -28,6 +28,8 @@ class UserHandler {
             ]);
         }
 
-        return $this->UserController->create($command->getName(), $command->getEmail(), $command->getPassword());
+        return response()->json(
+            $this->UserController->create($command->getName(), $command->getEmail(), $command->getPassword())
+        );
     }
 }

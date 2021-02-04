@@ -4,14 +4,25 @@ namespace App\Application\User\Command;
 
 class UserCommand {
 
+    /**
+     * @var string
+     */
     private $name;
+
+    /**
+     * @var string
+     */
     private $email;
+
+    /**
+     * @var string
+     */
     private $password;
 
     public function __construct(
-        string $name,
-        string $email,
-        string $password
+        $name,
+        $email,
+        $password
     )
     {
         $this->name = $name;

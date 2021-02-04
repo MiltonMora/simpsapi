@@ -3,12 +3,19 @@ namespace App\Application\Login\Command;
 
 class LoginCommand {
 
+    /**
+     * @var string
+     */
     private $email;
+
+    /**
+     * @var string
+     */
     private $password;
 
     public function __construct(
-        string $email,
-        string $password
+        $email,
+        $password
     )
     {
         $this->email = $email;

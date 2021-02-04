@@ -10,9 +10,9 @@ class CharacterHandler {
 
     private $characterController;
 
-    public function __construct()
+    public function __construct(CharacterController $characterController)
     {
-        $this->characterController = new CharacterController();
+        $this->characterController = $characterController;
     }
 
     public function handle(CharacterCommand $command){
@@ -39,14 +39,16 @@ class CharacterHandler {
             ]);
         }
 
-        return $this->characterController->create(
-            $command->getName(),
-            $image,
-            $command->getBirth(),
-            $command->getOccupation(),
-            $command->getStatus(),
-            $command->getType(),
-            $command->getOrigin()
+        return response()->json(
+            $this->characterController->create(
+                $command->getName(),
+                $image,
+                $command->getBirth(),
+                $command->getOccupation(),
+                $command->getStatus(),
+                $command->getType(),
+                $command->getOrigin()
+            )
         );
     }
 

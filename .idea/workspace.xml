@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5afced4c-6168-4e11-bf57-04ca54e729a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Application/Characters/EditCharactersHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Application/Characters/CharacterHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/CharacterHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Application/Characters/Command/CharacterCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/Command/CharacterCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Characters/Command/GetCharactersByIdCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/Command/GetCharactersByIdCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Characters/EditCharactersHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/EditCharactersHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Characters/GetCharactersByIdHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/GetCharactersByIdHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Characters/GetCharactersHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Characters/GetCharactersHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Login/Command/LoginCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Login/Command/LoginCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/Login/LoginHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/Login/LoginHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/User/Command/UserCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/User/Command/UserCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Application/User/UserHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Application/User/UserHandler.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/Api/Characters/CharactersRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Api/Characters/CharactersRoutes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/Api/User/UserRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/Api/User/UserRoutes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +187,8 @@
       <workItem from="1611684297735" duration="5438000" />
       <workItem from="1611855843691" duration="4998000" />
       <workItem from="1612110360093" duration="3584000" />
-      <workItem from="1612372192885" duration="4423000" />
+      <workItem from="1612372192885" duration="4543000" />
+      <workItem from="1612451769944" duration="8179000" />
     </task>
     <servers />
   </component>
@@ -184,10 +196,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1612374487796">
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser" timestamp="1612456224624">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1612374487796" />
+    <state x="488" y="85" key="#com.intellij.ide.util.MemberChooser/0.0.1366.738@0.0.1366.738" timestamp="1612456224624" />
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611858815319">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

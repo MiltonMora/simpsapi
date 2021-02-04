@@ -8,22 +8,26 @@ use App\Models\Character;
 class CharacterController extends Controller
 {
     /**
-     * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return array
      */
     public function index()
     {
-        return response()->json([
+        return [
             "data" => Character::all(),
             'status' => 200
-        ]);
+        ];
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\JsonResponse
+     * @param $name string
+     * @param $image string
+     * @param $birth integer
+     * @param $occupation string
+     * @param $status string
+     * @param $type string
+     * @param $origin integer
+     * @return array
      */
     public function create(
         $name,
@@ -45,16 +49,16 @@ class CharacterController extends Controller
             $character->origin = $origin;
             $character->save();
 
-            return response()->json([
+            return [
                 'message'=> 'user created successfully',
                 'status' => 200
-            ]);
+            ];
         }
         catch (\Exception $e) {
-            return response()->json([
+            return[
                 'message'=> $e,
                 'status' => 404
-            ]);
+            ];
         }
     }
 
@@ -73,21 +77,21 @@ class CharacterController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * @return array
      */
     public function show($id)
     {
         try {
-            return response()->json([
+            return [
                 'data' => Character::find($id),
                 'status' => 200
-            ]);
+            ];
         }
         catch (\Exception $e) {
-            return response()->json([
+            return[
                 'data' => $e,
                 'status' => 400
-            ]);
+            ];
         }
     }
 
@@ -103,9 +107,15 @@ class CharacterController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @return \Illuminate\Http\JsonResponse
+     * @param $id integer
+     * @param $name string|null
+     * @param $image string|null
+     * @param $birth integer|null
+     * @param $occupation string|null
+     * @param $status string|null
+     * @param $type string|null
+     * @param $origin integer|null
+     * @return array
      */
     public function update(
         $id,
@@ -117,20 +127,24 @@ class CharacterController extends Controller
         $type,
         $origin
     ) {
-
-        $character = Character::find($id);
-        $character->name = $name ? ucwords($name) : $character->name;
-        $character->image = $image ? $image : $character->image;
-        $character->birth = $birth ? $birth : $character->birth;
-        $character->occupation = $occupation ? $occupation : $character->occupation;
-        $character->status = $status ? $status : $character->status;
-        $character->type = $type ? $type : $character->type;
-        $character->origin = $origin ? $origin : $character->origin;
-        $character->save();
-
-        return response()->json(
-            ['data' => $character->birth, 'status' => 200]
-        );
+        try {
+            $character = Character::find($id);
+            $character->name = $name ? ucwords($name) : $character->name;
+            $character->image = $image ? $image : $character->image;
+            $character->birth = $birth ? $birth : $character->birth;
+            $character->occupation = $occupation ? $occupation : $character->occupation;
+            $character->status = $status ? $status : $character->status;
+            $character->type = $type ? $type : $character->type;
+            $character->origin = $origin ? $origin : $character->origin;
+            $character->save();
+            return ['data' => 'correct update', 'status' => 200];
+        }
+        catch (\Exception $e){
+            return [
+                'data' => $e,
+                'status' => 404
+            ];
+        }
     }
 
     /**

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Application\login\Command\LoginCommand;
 use App\Application\login\LoginHandler;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -19,7 +20,7 @@ use App\Application\login\LoginHandler;
 
 
 Route::post('/login', function (Request $request) {
-    $handle = new LoginHandler();
+    $handle = new LoginHandler(new LoginController);
     return $handle->handle(
         new LoginCommand($request->email, $request->password)
     );
@@ -28,4 +29,3 @@ Route::post('/login', function (Request $request) {
 require __DIR__ . '/Api/User/UserRoutes.php';
 require __DIR__ . '/Api/Characters/CharactersRoutes.php';
 
-// group user

@@ -12,14 +12,17 @@ class LoginController extends Controller
         try {
             $userData = User::where('email', $email)->first();
             if (Hash::check($password, $userData->password)) {
-                return $userData->api_token;
+                return [
+                    'data' => $userData->api_token,
+                    'status' => 200
+                    ];
             }
         }
         catch (\Exception $e) {
-            return response()->json([
+            return [
                     'data' => "Error en validacion de datos".$e,
                     'status' => 404
-                ]);
+            ];
         }
     }
 }

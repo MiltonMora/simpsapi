@@ -10,9 +10,9 @@ class LoginHandler {
 
     private $loginController;
 
-    public function __construct()
+    public function __construct(LoginController $loginController)
     {
-        $this->loginController = new LoginController();
+        $this->loginController = $loginController;
     }
 
     public function handle(LoginCommand $command) {
@@ -30,9 +30,11 @@ class LoginHandler {
             ]);
         }
 
-        return $this->loginController->Login(
-            $command->getEmail(),
-            $command->getPassword()
-        );
+        return response()->json([
+            $this->loginController->Login(
+                $command->getEmail(),
+                $command->getPassword()
+            )
+        ]);
     }
 }

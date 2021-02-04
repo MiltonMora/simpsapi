@@ -10,13 +10,13 @@ class GetCharactersHandler
 {
     private $characterController;
 
-    public function __construct()
+    public function __construct(CharacterController $characterController)
     {
-        $this->characterController = new CharacterController();
+        $this->characterController = $characterController;
     }
 
     public function handle(GetCharactersCommand $command){
-        return $this->characterController->index();
+        return response()->json($this->characterController->index());
     }
 
 

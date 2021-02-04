@@ -2,17 +2,49 @@
 
 namespace App\Application\Characters\Command;
 
+use http\Url;
 use Illuminate\Support\Facades\File;
 
 class CharacterCommand {
 
+    /**
+     * @var integer|null
+     */
     private $id;
+
+    /**
+     * @var string|null
+     */
     private $name;
+
+    /**
+     * @var string|null
+     */
     private $image;
+
+    /**
+     * @var integer|null
+     */
     private $birth;
+
+    /**
+     * @var string|null
+     */
     private $occupation;
+
+    /**
+     * @var string|null
+     */
     private $status;
+
+    /**
+     * @var string|null
+     */
     private $type;
+
+    /**
+     * @var integer|null
+     */
     private $origin;
 
     public function __construct(
@@ -37,7 +69,7 @@ class CharacterCommand {
     }
 
     /**
-     * @return null
+     * @return int|null
      */
     public function getId()
     {
@@ -45,7 +77,7 @@ class CharacterCommand {
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getName()
     {
@@ -53,7 +85,7 @@ class CharacterCommand {
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getImage()
     {
@@ -61,7 +93,7 @@ class CharacterCommand {
     }
 
     /**
-     * @return mixed
+     * @return int|null
      */
     public function getBirth()
     {
@@ -69,7 +101,7 @@ class CharacterCommand {
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getOccupation()
     {
@@ -77,7 +109,7 @@ class CharacterCommand {
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getStatus()
     {
@@ -85,7 +117,7 @@ class CharacterCommand {
     }
 
     /**
-     * @return mixed
+     * @return string|null
      */
     public function getType()
     {
@@ -93,12 +125,11 @@ class CharacterCommand {
     }
 
     /**
-     * @return mixed
+     * @return int|null
      */
     public function getOrigin()
     {
         return $this->origin;
     }
-
 
 }
